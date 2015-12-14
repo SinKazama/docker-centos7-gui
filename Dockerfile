@@ -9,9 +9,9 @@ RUN rm -f /etc/motd && \
     echo "Babim Container Framework \n \l" > /etc/issue && \
     touch "/(C) Babim"
     
-RUN yum update -y
-    yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y
-    yum install gedit file-roller firefox nano iputils tigervnc-server -y
+RUN yum update -y && \
+    yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y && \
+    yum install gedit file-roller firefox nano iputils tigervnc-server -y && \
     yum clean all
 
 # Define working directory.
