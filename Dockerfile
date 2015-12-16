@@ -1,13 +1,6 @@
-FROM centos
+FROM babim/centos6base
 
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
-
-RUN rm -f /etc/motd && \
-    echo "---" > /etc/motd && \
-    echo "Support by Duc Anh Babim. Contact: ducanh.babim@yahoo.com" >> /etc/motd && \
-    echo "---" >> /etc/motd && \
-    echo "Babim Container Framework \n \l" > /etc/issue && \
-    touch "/(C) Babim"
     
 RUN yum update -y && \
     yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y && \
