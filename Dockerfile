@@ -1,4 +1,4 @@
-FROM babim/centos6base
+FROM babim/centos7base
 
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
     
