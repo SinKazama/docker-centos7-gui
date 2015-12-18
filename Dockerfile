@@ -2,8 +2,7 @@ FROM babim/centos7base
 
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
     
-RUN yum update -y && \
-    yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y && \
+RUN yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y && \
     yum install gedit file-roller firefox nano iputils tigervnc-server openssh-server -y && \
     yum clean all
 
@@ -16,6 +15,7 @@ ADD runssh.sh /usr/sbin/runssh.sh
 RUN chmod +x /usr/sbin/runssh.sh
 
 ENV AUTHORIZED_KEYS **None**
+ENV LC_ALL en_US.UTF-8
 
 # Define working directory.
 WORKDIR /data
