@@ -15,3 +15,4 @@ CMD ["vncserver"]
 # Expose ports.
 EXPOSE 5901
 ENV LC_ALL en_US.UTF-8
+ENV TZ Asia/Ho_Chi_Minh
