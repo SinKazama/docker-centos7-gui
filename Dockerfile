@@ -6,11 +6,11 @@ RUN yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y && \
     yum install gedit file-roller firefox nano iputils tigervnc-server openssh-server -y && \
     yum clean all
 
+ADD runssh.sh /usr/sbin/runssh.sh
+RUN chmod +x /usr/sbin/runssh.sh
 ENV AUTHORIZED_KEYS **None**
 ENV LC_ALL en_US.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
-# Define working directory.
-WORKDIR /data
 
 # Define default command.
 CMD ["vncserver"]
