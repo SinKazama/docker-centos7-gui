@@ -6,9 +6,6 @@ RUN yum groupinstall "GNOME Desktop" "Graphical Administration Tools" -y && \
     yum install gedit file-roller firefox nano iputils tigervnc-server -y && \
     yum clean all
 
-# Define working directory.
-WORKDIR /data
-
 # Define default command.
 CMD ["vncserver"]
 
