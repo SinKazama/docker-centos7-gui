@@ -12,9 +12,6 @@ ENV AUTHORIZED_KEYS **None**
 ENV LC_ALL en_US.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
 
-# Define default command.
-CMD ["vncserver"]
-
 # Expose ports.
 EXPOSE 5901 22
 CMD ["/usr/sbin/runssh.sh"]
